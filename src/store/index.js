@@ -58,7 +58,7 @@ export default new Vuex.Store({
     region: "none",
     profession: "none",
     armor: armors.none,
-    weapon: weapons.none,
+    weapon: weapons.fists,
     skill: [],
     stats: {
       might: 10,
@@ -74,7 +74,9 @@ export default new Vuex.Store({
     description: "welcome"
   },
 
-  getters: {},
+  getters: {
+    
+  },
 
   mutations: {
     setValue(state, obj) {

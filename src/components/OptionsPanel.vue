@@ -10,14 +10,14 @@
               :selected="isCurrentView(views[view])"
               @click="setOption(updateView(views[view]), getOption(view))"
             >
-              {{ views[view] }}
+              {{ $store.state.text[views[view]].title }}
             </gradient-button>
           </template>
         </div>
         <div class="md-layout-item options-view">
           <template v-if="!isCurrentView('none')">
             <section-heading>
-              <h2>{{ currentView }}</h2>
+              <h2>{{ $store.state.text[currentView].title }}</h2>
             </section-heading>
 
             <div
@@ -45,7 +45,7 @@
                     }))
                   "
                 >
-                  {{ $store.state[pluralize(currentView)][key] }}
+                  {{ $store.state.text[currentView][$store.state[pluralize(currentView)][key]].title }}
                 </gradient-button>
               </template>
             </div>
@@ -69,7 +69,7 @@
                     }), `subrace.${$store.state.race}.${subrace}`)
                   "
                 >
-                  {{ $store.state.subraces[$store.state.race][subrace] }}
+                  {{ $store.state.text[currentView][$store.state.race][$store.state.subraces[$store.state.race][subrace]].title }}
                 </gradient-button>
               </template>
             </div>
@@ -96,10 +96,10 @@
                     setOption(setValue({
                       property: currentView,
                       value: $store.state[pluralize(currentView)][key]
-                    }))
+                    }), getOption(currentView, key))
                   "
                 >
-                  {{ $store.state[pluralize(currentView)][key] }}
+                  {{ $store.state.text[currentView][$store.state[pluralize(currentView)][key]].title }}
                 </gradient-button>
               </template>
             </div>
@@ -120,7 +120,7 @@
                 >
                   <md-icon>keyboard_arrow_left</md-icon>
                 </md-button>
-                <span class="options-arrow-layout-label">{{ key }}</span>
+                <span class="options-arrow-layout-label">{{ $store.state.text[currentView][key].title }}</span>
                 <md-button
                   class="md-icon-button"
                   @click="setOption(rotateForwards({ view: currentView, property: key }))"
@@ -192,7 +192,7 @@
                   <div class="md-layout-item md-size-15">
                     <md-button
                       class="md-icon-button"
-                      @click="setOption(decrementStat({ property: stat }))"
+                      @click="setOption(decrementStat({ property: stat }), getOption(currentView, stat))"
                     >
                       <md-icon>remove</md-icon>
                     </md-button>
@@ -211,7 +211,7 @@
                   <div class="md-layout-item md-size-15">
                     <md-button
                       class="md-icon-button"
-                      @click="setOption(incrementStat({ property: stat }))"
+                      @click="setOption(incrementStat({ property: stat }), getOption(currentView, stat))"
                     >
                       <md-icon>add</md-icon>
                     </md-button>
@@ -298,10 +298,27 @@ export default {
       this.updateDescription(option);
       callback;
     },
-    getOption(view) {
+    getOption(view, value) {
+      console.log(`getOption > view: ${view}, value: ${value}, result: ${`skill.${value}`}`);
       switch (view) {
         case this.views.subrace:
           return `subrace.${this.$store.state.race}.${this.$store.state.subrace}`;
+        case this.views.body:
+          return 'welcome';
+        case this.views.head:
+          return 'welcome';
+        case this.views.face:
+          return 'welcome';
+        case this.views.skill:
+          if (this.$store.state.skill.length === 0) {
+            return 'skill.none';
+          }
+          return `skill.${value}`;
+        case this.views.stats:
+          if (value) {
+            return `stats.${value}`;
+          }
+          return `stats.none`;
         default:
           return `${this.currentView}.${this.$store.state[this.currentView]}`;
       }
@@ -361,17 +378,17 @@ export default {
   .options-arrow-layout-label {
     display: inline-block;
     font-family: 'Cormorant Upright', serif;
-    font-size: 1.7em;
+    font-size: 1.6em;
     text-transform: capitalize;
     width: 100%;
-    max-width: 120px;
+    max-width: 150px;
   }
 
   .options-region-layout-label,
   .options-stats-layout-stat-label {
     display: block;
     font-family: 'Cormorant Upright', serif;
-    font-size: 1.7em;
+    font-size: 1.6em;
     text-transform: capitalize;
     width: 100%;
   }
@@ -551,9 +568,7 @@ export default {
   .clear {
     clear: both;
   }
-
-
-
+  
   .options-stats-layout-stat-meter {
     height: 20px;
     position: relative;

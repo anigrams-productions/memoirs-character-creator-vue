@@ -37,6 +37,7 @@ export default {
 
   &.section-heading-brown {
     background-image: url('../assets/HeaderDecoration2.png');
+    font-size: 0.8em;
   }
 }
 </style>

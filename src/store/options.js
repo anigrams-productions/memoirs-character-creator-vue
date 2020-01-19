@@ -209,11 +209,11 @@ export const professions = {
   merchant: "merchant",
   miner: "miner",
   priest: "priest",
-  sailor: "sailor",
   scholar: "scholar",
   slave: "slave",
   smuggler: "smuggler",
   soldier: "soldier",
+  traveler: "traveler",
   other: "other"
 };
 
@@ -225,10 +225,10 @@ export const armors = {
 };
 
 export const weapons = {
-  none: "none",
+  fists: "fists",
   sword: "sword",
   axe: "axe",
-  daggers: "daggers",
+  dual: "dual",
   bow: "bow",
   magic: "magic"
 };
