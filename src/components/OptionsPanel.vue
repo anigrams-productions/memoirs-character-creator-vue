@@ -111,19 +111,19 @@
             >
               <div
                 class="options-arrow-layout-container"
-                v-for="key in Object.keys($store.state[currentView])"
+                v-for="key in Object.keys($store.state[currentView][$store.state.race][$store.state.subrace])"
                 :key="key"
               >
                 <md-button
                   class="md-icon-button"
-                  @click="setOption(rotateBackwards({ view: currentView, property: key }))"
+                  @click="rotateBackwards({ view: currentView, property: key })"
                 >
                   <md-icon>keyboard_arrow_left</md-icon>
                 </md-button>
                 <span class="options-arrow-layout-label">{{ $store.state.text[currentView][key].title }}</span>
                 <md-button
                   class="md-icon-button"
-                  @click="setOption(rotateForwards({ view: currentView, property: key }))"
+                  @click="rotateForwards({ view: currentView, property: key })"
                 >
                   <md-icon>keyboard_arrow_right</md-icon>
                 </md-button>

@@ -95,9 +95,8 @@ export default new Vuex.Store({
     },
     rotateBackwards(state, obj) {
       const unpluralizedProperty = obj.property.slice(0, -1);
-      const min = state[obj.view][obj.property][0];
-      const max =
-        state[obj.view][obj.property][state[obj.view][obj.property].length - 1];
+      const min = state[obj.view][state.race][state.subrace][obj.property].min;
+      const max = state[obj.view][state.race][state.subrace][obj.property].max;
       let newValue = state[unpluralizedProperty] - 1;
 
       if (newValue < min) {
@@ -108,9 +107,8 @@ export default new Vuex.Store({
     },
     rotateForwards(state, obj) {
       const unpluralizedProperty = obj.property.slice(0, -1);
-      const min = state[obj.view][obj.property][0];
-      const max =
-        state[obj.view][obj.property][state[obj.view][obj.property].length - 1];
+      const min = state[obj.view][state.race][state.subrace][obj.property].min;
+      const max = state[obj.view][state.race][state.subrace][obj.property].max;
       let newValue = state[unpluralizedProperty] + 1;
 
       if (newValue > max) {

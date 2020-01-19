@@ -228,6 +228,24 @@ export default {
     },
     armTattoos: {
       title: "Arm Tattoo"
+    },
+    horns: {
+      title: "Horns"
+    },
+    hornColors: {
+      title: "Horn Color"
+    },
+    tails: {
+      title: "Tail"
+    },
+    tailColors: {
+      title: "Tail Color"
+    },
+    wings: {
+      title: "Wings"
+    },
+    wingColors: {
+      title: "Wing Color"
     }
   },
   head: {
