@@ -39,13 +39,19 @@
                   :key="key"
                   :selected="isSelected(key, $store.state[currentView])"
                   @click="
-                    setOption(setValue({
-                      property: currentView,
-                      value: $store.state[pluralize(currentView)][key]
-                    }))
+                    setOption(
+                      setValue({
+                        property: currentView,
+                        value: $store.state[pluralize(currentView)][key]
+                      })
+                    )
                   "
                 >
-                  {{ $store.state.text[currentView][$store.state[pluralize(currentView)][key]].title }}
+                  {{
+                    $store.state.text[currentView][
+                      $store.state[pluralize(currentView)][key]
+                    ].title
+                  }}
                 </gradient-button>
               </template>
             </div>
@@ -63,13 +69,20 @@
                   :key="subrace"
                   :selected="isSelected(subrace, $store.state.subrace)"
                   @click="
-                    setOption(setValue({
-                      property: 'subrace',
-                      value: $store.state.subraces[$store.state.race][subrace]
-                    }), `subrace.${$store.state.race}.${subrace}`)
+                    setOption(
+                      setValue({
+                        property: 'subrace',
+                        value: $store.state.subraces[$store.state.race][subrace]
+                      }),
+                      `subrace.${$store.state.race}.${subrace}`
+                    )
                   "
                 >
-                  {{ $store.state.text[currentView][$store.state.race][$store.state.subraces[$store.state.race][subrace]].title }}
+                  {{
+                    $store.state.text[currentView][$store.state.race][
+                      $store.state.subraces[$store.state.race][subrace]
+                    ].title
+                  }}
                 </gradient-button>
               </template>
             </div>
@@ -93,13 +106,20 @@
                   size="small"
                   :selected="isSelected(key, $store.state[currentView])"
                   @click="
-                    setOption(setValue({
-                      property: currentView,
-                      value: $store.state[pluralize(currentView)][key]
-                    }), getOption(currentView, key))
+                    setOption(
+                      setValue({
+                        property: currentView,
+                        value: $store.state[pluralize(currentView)][key]
+                      }),
+                      getOption(currentView, key)
+                    )
                   "
                 >
-                  {{ $store.state.text[currentView][$store.state[pluralize(currentView)][key]].title }}
+                  {{
+                    $store.state.text[currentView][
+                      $store.state[pluralize(currentView)][key]
+                    ].title
+                  }}
                 </gradient-button>
               </template>
             </div>
@@ -111,7 +131,11 @@
             >
               <div
                 class="options-arrow-layout-container"
-                v-for="key in Object.keys($store.state[currentView][$store.state.race][$store.state.subrace])"
+                v-for="key in Object.keys(
+                  $store.state[currentView][$store.state.race][
+                    $store.state.subrace
+                  ]
+                )"
                 :key="key"
               >
                 <md-button
@@ -120,7 +144,9 @@
                 >
                   <md-icon>keyboard_arrow_left</md-icon>
                 </md-button>
-                <span class="options-arrow-layout-label">{{ $store.state.text[currentView][key].title }}</span>
+                <span class="options-arrow-layout-label">{{
+                  $store.state.text[currentView][key].title
+                }}</span>
                 <md-button
                   class="md-icon-button"
                   @click="rotateForwards({ view: currentView, property: key })"
@@ -164,10 +190,12 @@
                           { selected: isSelected(region, $store.state.region) }
                         ]"
                         @click="
-                          setOption(setValue({
-                            property: 'region',
-                            value: $store.state.regions[region]
-                          }))
+                          setOption(
+                            setValue({
+                              property: 'region',
+                              value: $store.state.regions[region]
+                            })
+                          )
                         "
                       ></button>
                     </template>
@@ -192,7 +220,12 @@
                   <div class="md-layout-item md-size-15">
                     <md-button
                       class="md-icon-button"
-                      @click="setOption(decrementStat({ property: stat }), getOption(currentView, stat))"
+                      @click="
+                        setOption(
+                          decrementStat({ property: stat }),
+                          getOption(currentView, stat)
+                        )
+                      "
                     >
                       <md-icon>remove</md-icon>
                     </md-button>
@@ -211,7 +244,12 @@
                   <div class="md-layout-item md-size-15">
                     <md-button
                       class="md-icon-button"
-                      @click="setOption(incrementStat({ property: stat }), getOption(currentView, stat))"
+                      @click="
+                        setOption(
+                          incrementStat({ property: stat }),
+                          getOption(currentView, stat)
+                        )
+                      "
                     >
                       <md-icon>add</md-icon>
                     </md-button>
@@ -293,25 +331,27 @@ export default {
     },
     setOption(callback, option) {
       if (!option) {
-        option = `${this.currentView}.${this.$store.state[this.currentView]}`
+        option = `${this.currentView}.${this.$store.state[this.currentView]}`;
       }
       this.updateDescription(option);
       callback;
     },
     getOption(view, value) {
-      console.log(`getOption > view: ${view}, value: ${value}, result: ${`skill.${value}`}`);
+      console.log(
+        `getOption > view: ${view}, value: ${value}, result: ${`skill.${value}`}`
+      );
       switch (view) {
         case this.views.subrace:
           return `subrace.${this.$store.state.race}.${this.$store.state.subrace}`;
         case this.views.body:
-          return 'welcome';
+          return "welcome";
         case this.views.head:
-          return 'welcome';
+          return "welcome";
         case this.views.face:
-          return 'welcome';
+          return "welcome";
         case this.views.skill:
           if (this.$store.state.skill.length === 0) {
-            return 'skill.none';
+            return "skill.none";
           }
           return `skill.${value}`;
         case this.views.stats:
@@ -568,7 +608,7 @@ export default {
   .clear {
     clear: both;
   }
-  
+
   .options-stats-layout-stat-meter {
     height: 20px;
     position: relative;

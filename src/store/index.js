@@ -74,9 +74,7 @@ export default new Vuex.Store({
     description: "welcome"
   },
 
-  getters: {
-    
-  },
+  getters: {},
 
   mutations: {
     setValue(state, obj) {

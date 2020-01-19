@@ -2,10 +2,16 @@
   <div id="description-panel">
     <div class="description-container">
       <section-heading color="brown">
-        <h2>{{ getPath(`$store.state.text.${$store.state.description}.title`) }}</h2>
+        <h2>
+          {{ getPath(`$store.state.text.${$store.state.description}.title`) }}
+        </h2>
       </section-heading>
 
-      <p v-html="getPath(`$store.state.text.${$store.state.description}.description`)"></p>
+      <p
+        v-html="
+          getPath(`$store.state.text.${$store.state.description}.description`)
+        "
+      ></p>
     </div>
   </div>
 </template>
@@ -19,9 +25,9 @@ export default {
     SectionHeading
   },
   methods: {
-    getPath(path, separator='.') {
+    getPath(path, separator = ".") {
       const properties = Array.isArray(path) ? path : path.split(separator);
-      return properties.reduce((prev, curr) => prev && prev[curr], this);;
+      return properties.reduce((prev, curr) => prev && prev[curr], this);
     }
   }
 };
