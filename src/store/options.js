@@ -138,21 +138,21 @@ export const body = {
   human: {
     prairie: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 4, max: 11 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 }
     },
     mountainous: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 2, max: 8 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 }
     },
     coastal: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 8, max: 15 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 }
@@ -161,14 +161,14 @@ export const body = {
   elf: {
     light: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 1, max: 6 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 }
     },
     druid: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 1, max: 15 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 }
@@ -177,7 +177,7 @@ export const body = {
   demon: {
     mountain: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 2, max: 11 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 },
@@ -188,7 +188,7 @@ export const body = {
     },
     desert: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 6, max: 19 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 },
@@ -199,7 +199,7 @@ export const body = {
     },
     islander: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 8, max: 19 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 },
@@ -212,21 +212,21 @@ export const body = {
   dwarf: {
     limestone: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 4, max: 11 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 }
     },
     volcanic: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 8, max: 15 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 }
     },
     glacial: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 1, max: 6 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 }
@@ -235,7 +235,7 @@ export const body = {
   angel: {
     lawful: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 1, max: 15 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 },
@@ -244,7 +244,7 @@ export const body = {
     },
     chaotic: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 1, max: 15 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 },
@@ -255,21 +255,21 @@ export const body = {
   siren: {
     freshwater: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 20, max: 21 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 }
     },
     saltwater: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 19, max: 20 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 }
     },
     swamp: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 16, max: 17 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 }
@@ -278,7 +278,7 @@ export const body = {
   djinn: {
     lawful: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 1, max: 15 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 },
@@ -287,7 +287,7 @@ export const body = {
     },
     chaotic: {
       poses: { min: 1, max: 6 },
-      skinColors: { min: 1, max: 21 },
+      skinColors: { min: 1, max: 15 },
       faceTattoos: { min: 0, max: 18 },
       bodyTattoos: { min: 0, max: 12 },
       armTattoos: { min: 0, max: 4 },
@@ -324,126 +324,126 @@ export const head = {
   human: {
     prairie: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 2, max: 10 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 2, max: 7 },
       beards: { min: 0, max: 6 }
     },
     mountainous: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 2, max: 10 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 4, max: 9 },
       beards: { min: 0, max: 6 }
     },
     coastal: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 2, max: 10 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 4, max: 9 },
       beards: { min: 0, max: 6 }
     }
   },
   elf: {
     light: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 1, max: 9 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 1, max: 4 },
       beards: { min: 0, max: 6 }
     },
     druid: {
       eyes: { min: 1, max: 6 },
       eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 1, max: 9 },
       beards: { min: 0, max: 6 }
     }
   },
   demon: {
     mountain: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 2, max: 14 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 2, max: 9 },
       beards: { min: 0, max: 6 }
     },
     desert: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 2, max: 14 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 2, max: 9 },
       beards: { min: 0, max: 6 }
     },
     islander: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 2, max: 14 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 4, max: 11 },
       beards: { min: 0, max: 6 }
     }
   },
   dwarf: {
     limestone: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 2, max: 10 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 2, max: 7 },
       beards: { min: 0, max: 6 }
     },
     volcanic: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 2, max: 10 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 4, max: 9 },
       beards: { min: 0, max: 6 }
     },
     glacial: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 2, max: 10 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 1, max: 4 },
       beards: { min: 0, max: 6 }
     }
   },
   angel: {
     lawful: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 1, max: 14 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
@@ -452,8 +452,8 @@ export const head = {
     },
     chaotic: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 1, max: 14 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
@@ -464,40 +464,40 @@ export const head = {
   siren: {
     freshwater: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 2, max: 14 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 8, max: 11 },
       beards: { min: 0, max: 6 }
     },
     saltwater: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 2, max: 14 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 8, max: 10 },
       beards: { min: 0, max: 6 }
     },
     swamp: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 2, max: 14 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
-      hairColors: { min: 1, max: 11 },
+      hairColors: { min: 7, max: 11 },
       beards: { min: 0, max: 6 }
     }
   },
   djinn: {
     lawful: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 1, max: 14 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
@@ -506,8 +506,8 @@ export const head = {
     },
     chaotic: {
       eyes: { min: 1, max: 6 },
-      eyeColors: { min: 1, max: 13 },
-      eyebrows: { min: 1, max: 4 },
+      eyeColors: { min: 1, max: 14 },
+      eyebrows: { min: 0, max: 6 },
       mouths: { min: 1, max: 5 },
       lipColors: { min: 1, max: 12 },
       hairstyles: { min: 0, max: 40 },
@@ -534,21 +534,21 @@ export const face = {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     },
     mountainous: {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     },
     coastal: {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     }
   },
@@ -557,14 +557,14 @@ export const face = {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     },
     druid: {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     }
   },
@@ -573,21 +573,21 @@ export const face = {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     },
     desert: {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     },
     islander: {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     }
   },
@@ -596,21 +596,21 @@ export const face = {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     },
     volcanic: {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     },
     glacial: {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     }
   },
@@ -619,14 +619,14 @@ export const face = {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     },
     chaotic: {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     }
   },
@@ -635,21 +635,21 @@ export const face = {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     },
     saltwater: {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     },
     swamp: {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     }
   },
@@ -658,29 +658,29 @@ export const face = {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     },
     chaotic: {
       moles: { min: 0, max: 4 },
       scars: { min: 0, max: 5 },
       cheeks: { min: 0, max: 3 },
-      accessories: { min: 0, max: 2 },
+      accessorys: { min: 0, max: 2 },
       piercings: { min: 0, max: 9 }
     }
   },
   anthropomorph: {
     aguama: {
       scars: { min: 0, max: 4 },
-      accessories: { min: 0, max: 2 }
+      accessorys: { min: 0, max: 2 }
     },
     koufa: {
       scars: { min: 0, max: 4 },
-      accessories: { min: 0, max: 2 }
+      accessorys: { min: 0, max: 2 }
     },
     lupios: {
       scars: { min: 0, max: 4 },
-      accessories: { min: 0, max: 2 }
+      accessorys: { min: 0, max: 2 }
     }
   }
 };

@@ -326,6 +326,9 @@ export default {
     pluralize(name) {
       return name + "s";
     },
+    unpluralize(name) {
+      return name.slice(0, -1);
+    },
     calculatePercentage(value, total) {
       return (value / total) * 100;
     },
@@ -372,6 +375,48 @@ export default {
       this.$store.state.subrace = this.$store.state.subraces[race][
         firstSubrace
       ];
+    },
+    "$store.state.subrace"(subrace) {
+      // when subrace changes, set everything back to minimums
+      const race = this.$store.state.race;
+      const component = this;
+      console.log(`Subrace changed > subrace: ${subrace}, race: ${race}`);
+      // Body
+      Object.keys(component.$store.state.body[race][subrace]).forEach(function(
+        key
+      ) {
+        console.log(
+          `Updating body > key: ${key}, state key: ${component.unpluralize(
+            key
+          )}, min: ${component.$store.state.body[race][subrace][key].min}`
+        );
+        component.$store.state[component.unpluralize(key)] =
+          component.$store.state.body[race][subrace][key].min;
+      });
+      // Head
+      Object.keys(component.$store.state.head[race][subrace]).forEach(function(
+        key
+      ) {
+        console.log(
+          `Updating head > key: ${key}, state key: ${component.unpluralize(
+            key
+          )}, min: ${component.$store.state.head[race][subrace][key].min}`
+        );
+        component.$store.state[component.unpluralize(key)] =
+          component.$store.state.head[race][subrace][key].min;
+      });
+      // Face
+      Object.keys(component.$store.state.face[race][subrace]).forEach(function(
+        key
+      ) {
+        console.log(
+          `Updating face > key: ${key}, state key: ${component.unpluralize(
+            key
+          )}, min: ${component.$store.state.face[race][subrace][key].min}`
+        );
+        component.$store.state[component.unpluralize(key)] =
+          component.$store.state.face[race][subrace][key].min;
+      });
     }
   }
 };
