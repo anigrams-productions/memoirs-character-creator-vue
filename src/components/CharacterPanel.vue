@@ -84,12 +84,14 @@
       <div
         v-if="showLayer('face', 'cheeks')"
         class="character-panel-layer"
-        :class="`cheeks-${$store.state.cheek} color-${$store.state.skinColor}`"
+        :class="
+          `cheeks-${$store.state.cheek} color-${$store.state.skinColor} race-${$store.state.race}`
+        "
       ></div>
       <div
         v-if="showLayer('face', 'moles')"
         class="character-panel-layer"
-        :class="`mole-${$store.state.mole}`"
+        :class="`mole mole-${$store.state.mole} race-${$store.state.race}`"
       ></div>
       <div
         class="character-panel-layer"
@@ -113,7 +115,9 @@
       <div
         v-if="showLayer('head', 'mouths')"
         class="character-panel-layer"
-        :class="`mouth-${$store.state.mouth} color-${$store.state.lipColor}`"
+        :class="
+          `mouth-${$store.state.mouth} color-${$store.state.lipColor} race-${$store.state.race}`
+        "
       ></div>
       <div
         v-if="showLayer('head', 'hairstyles')"
@@ -138,7 +142,9 @@
       <div
         v-if="showLayer('face', 'piercings')"
         class="character-panel-layer"
-        :class="`piercings-${$store.state.piercing}`"
+        :class="
+          `piercings piercings-${$store.state.piercing} race-${$store.state.race}`
+        "
       ></div>
       <div
         v-if="showLayer('head', 'hairstyles')"
@@ -2117,7 +2123,7 @@ export default {
     }
 
     &.ears.race-dwarf {
-      top: 240px;
+      top: calc(155px + 85px);
     }
 
     &.ears.race-siren {
@@ -2211,7 +2217,7 @@ export default {
     }
 
     &.eyes-1.race-dwarf {
-      top: 249px;
+      top: calc(164px + 85px);
     }
 
     &.eyes-2 {
@@ -2278,7 +2284,7 @@ export default {
     }
 
     &.eyes-2.race-dwarf {
-      top: 249px;
+      top: calc(164px + 85px);
     }
 
     &.eyes-3 {
@@ -2290,7 +2296,7 @@ export default {
     }
 
     &.eyes-3.race-dwarf {
-      top: 249px;
+      top: calc(164px + 85px);
     }
 
     &.eyes-4 {
@@ -2357,7 +2363,7 @@ export default {
     }
 
     &.eyes-4.race-dwarf {
-      top: 242px;
+      top: calc(157px + 85px);
     }
 
     &.eyes-5 {
@@ -2424,7 +2430,7 @@ export default {
     }
 
     &.eyes-5.race-dwarf {
-      top: 247px;
+      top: calc(162px + 85px);
     }
 
     &.eyes-6 {
@@ -2436,7 +2442,7 @@ export default {
     }
 
     &.eyes-6.race-dwarf {
-      top: 249px;
+      top: calc(164px + 85px);
     }
 
     &.eyes.subrace-aguama {
@@ -2540,7 +2546,711 @@ export default {
     }
 
     &.eyebrows.race-dwarf {
-      top: 222px;
+      top: calc(137px + 85px);
+    }
+
+    &.mouth-1 {
+      width: 27px;
+      height: 9px;
+      left: 165px;
+      top: 215px;
+
+      &.color-1 {
+        background: url('../assets/Face.png') calc(-27px * 0) calc(-9px * 0);
+      }
+
+      &.color-2 {
+        background: url('../assets/Face.png') calc(-27px * 1) calc(-9px * 0);
+      }
+
+      &.color-3 {
+        background: url('../assets/Face.png') calc(-27px * 2) calc(-9px * 0);
+      }
+
+      &.color-4 {
+        background: url('../assets/Face.png') calc(-27px * 3) calc(-9px * 0);
+      }
+
+      &.color-5 {
+        background: url('../assets/Face.png') calc(-27px * 4) calc(-9px * 0);
+      }
+
+      &.color-6 {
+        background: url('../assets/Face.png') calc(-27px * 5) calc(-9px * 0);
+      }
+
+      &.color-7 {
+        background: url('../assets/Face.png') calc(-27px * 0) calc(-9px * 1);
+      }
+
+      &.color-8 {
+        background: url('../assets/Face.png') calc(-27px * 1) calc(-9px * 1);
+      }
+
+      &.color-9 {
+        background: url('../assets/Face.png') calc(-27px * 2) calc(-9px * 1);
+      }
+
+      &.color-10 {
+        background: url('../assets/Face.png') calc(-27px * 3) calc(-9px * 1);
+      }
+
+      &.color-11 {
+        background: url('../assets/Face.png') calc(-27px * 4) calc(-9px * 1);
+      }
+
+      &.color-12 {
+        background: url('../assets/Face.png') calc(-27px * 5) calc(-9px * 1);
+      }
+    }
+
+    &.mouth-1.race-dwarf {
+      top: calc(215px + 85px);
+    }
+
+    &.mouth-2 {
+      width: 29px;
+      height: 15px;
+      left: 163px;
+      top: 213px;
+
+      &.color-1 {
+        background: url('../assets/Face.png') calc(-29px * 0) calc(-18px + calc(-15px * 0));
+      }
+
+      &.color-2 {
+        background: url('../assets/Face.png') calc(-29px * 1) calc(-18px + calc(-15px * 0));
+      }
+
+      &.color-3 {
+        background: url('../assets/Face.png') calc(-29px * 2) calc(-18px + calc(-15px * 0));
+      }
+
+      &.color-4 {
+        background: url('../assets/Face.png') calc(-29px * 3) calc(-18px + calc(-15px * 0));
+      }
+
+      &.color-5 {
+        background: url('../assets/Face.png') calc(-29px * 4) calc(-18px + calc(-15px * 0));
+      }
+
+      &.color-6 {
+        background: url('../assets/Face.png') calc(-29px * 5) calc(-18px + calc(-15px * 0));
+      }
+
+      &.color-7 {
+        background: url('../assets/Face.png') calc(-29px * 0) calc(-18px + calc(-15px * 1));
+      }
+
+      &.color-8 {
+        background: url('../assets/Face.png') calc(-29px * 1) calc(-18px + calc(-15px * 1));
+      }
+
+      &.color-9 {
+        background: url('../assets/Face.png') calc(-29px * 2) calc(-18px + calc(-15px * 1));
+      }
+
+      &.color-10 {
+        background: url('../assets/Face.png') calc(-29px * 3) calc(-18px + calc(-15px * 1));
+      }
+
+      &.color-11 {
+        background: url('../assets/Face.png') calc(-29px * 4) calc(-18px + calc(-15px * 1));
+      }
+
+      &.color-12 {
+        background: url('../assets/Face.png') calc(-29px * 5) calc(-18px + calc(-15px * 1));
+      }
+    }
+
+    &.mouth-2.race-dwarf {
+      top: calc(213px + 85px);
+    }
+
+    &.mouth-3 {
+      width: 27px;
+      height: 8px;
+      left: 166px;
+      top: 215px;
+
+      &.color-1 {
+        background: url('../assets/Face.png') calc(-162px + calc(-27px * 0)) calc(-8px * 0);
+      }
+
+      &.color-2 {
+        background: url('../assets/Face.png') calc(-162px + calc(-27px * 1)) calc(-8px * 0);
+      }
+
+      &.color-3 {
+        background: url('../assets/Face.png') calc(-162px + calc(-27px * 2)) calc(-8px * 0);
+      }
+
+      &.color-4 {
+        background: url('../assets/Face.png') calc(-162px + calc(-27px * 3)) calc(-8px * 0);
+      }
+
+      &.color-5 {
+        background: url('../assets/Face.png') calc(-162px + calc(-27px * 4)) calc(-8px * 0);
+      }
+
+      &.color-6 {
+        background: url('../assets/Face.png') calc(-162px + calc(-27px * 5)) calc(-8px * 0);
+      }
+
+      &.color-7 {
+        background: url('../assets/Face.png') calc(-162px + calc(-27px * 0)) calc(-8px * 1);
+      }
+
+      &.color-8 {
+        background: url('../assets/Face.png') calc(-162px + calc(-27px * 1)) calc(-8px * 1);
+      }
+
+      &.color-9 {
+        background: url('../assets/Face.png') calc(-162px + calc(-27px * 2)) calc(-8px * 1);
+      }
+
+      &.color-10 {
+        background: url('../assets/Face.png') calc(-162px + calc(-27px * 3)) calc(-8px * 1);
+      }
+
+      &.color-11 {
+        background: url('../assets/Face.png') calc(-162px + calc(-27px * 4)) calc(-8px * 1);
+      }
+
+      &.color-12 {
+        background: url('../assets/Face.png') calc(-162px + calc(-27px * 5)) calc(-8px * 1);
+      }
+    }
+
+    &.mouth-3.race-dwarf {
+      top: calc(215px + 85px);
+    }
+
+    &.mouth-4 {
+      width: 28px;
+      height: 13px;
+      left: 164px;
+      top: 215px;
+
+      &.color-1 {
+        background: url('../assets/Face.png') calc(-324px + calc(-28px * 0)) calc(-13px * 0);
+      }
+
+      &.color-2 {
+        background: url('../assets/Face.png') calc(-324px + calc(-28px * 1)) calc(-13px * 0);
+      }
+
+      &.color-3 {
+        background: url('../assets/Face.png') calc(-324px + calc(-28px * 2)) calc(-13px * 0);
+      }
+
+      &.color-4 {
+        background: url('../assets/Face.png') calc(-324px + calc(-28px * 3)) calc(-13px * 0);
+      }
+
+      &.color-5 {
+        background: url('../assets/Face.png') calc(-324px + calc(-28px * 4)) calc(-13px * 0);
+      }
+
+      &.color-6 {
+        background: url('../assets/Face.png') calc(-324px + calc(-28px * 5)) calc(-13px * 0);
+      }
+
+      &.color-7 {
+        background: url('../assets/Face.png') calc(-324px + calc(-28px * 0)) calc(-13px * 1);
+      }
+
+      &.color-8 {
+        background: url('../assets/Face.png') calc(-324px + calc(-28px * 1)) calc(-13px * 1);
+      }
+
+      &.color-9 {
+        background: url('../assets/Face.png') calc(-324px + calc(-28px * 2)) calc(-13px * 1);
+      }
+
+      &.color-10 {
+        background: url('../assets/Face.png') calc(-324px + calc(-28px * 3)) calc(-13px * 1);
+      }
+
+      &.color-11 {
+        background: url('../assets/Face.png') calc(-324px + calc(-28px * 4)) calc(-13px * 1);
+      }
+
+      &.color-12 {
+        background: url('../assets/Face.png') calc(-324px + calc(-28px * 5)) calc(-13px * 1);
+      }
+    }
+
+    &.mouth-4.race-dwarf {
+      top: calc(215px + 85px);
+    }
+
+    &.mouth-5 {
+      width: 29px;
+      height: 14px;
+      left: 163px;
+      top: 215px;
+
+      &.color-1 {
+        background: url('../assets/Face.png') calc(-174px + calc(-29px * 0)) calc(-26px + calc(-14px * 0));
+      }
+
+      &.color-2 {
+        background: url('../assets/Face.png') calc(-174px + calc(-29px * 1)) calc(-26px + calc(-14px * 0));
+      }
+
+      &.color-3 {
+        background: url('../assets/Face.png') calc(-174px + calc(-29px * 2)) calc(-26px + calc(-14px * 0));
+      }
+
+      &.color-4 {
+        background: url('../assets/Face.png') calc(-174px + calc(-29px * 3)) calc(-26px + calc(-14px * 0));
+      }
+
+      &.color-5 {
+        background: url('../assets/Face.png') calc(-174px + calc(-29px * 4)) calc(-26px + calc(-14px * 0));
+      }
+
+      &.color-6 {
+        background: url('../assets/Face.png') calc(-174px + calc(-29px * 5)) calc(-26px + calc(-14px * 0));
+      }
+
+      &.color-7 {
+        background: url('../assets/Face.png') calc(-174px + calc(-29px * 0)) calc(-26px + calc(-14px * 1));
+      }
+
+      &.color-8 {
+        background: url('../assets/Face.png') calc(-174px + calc(-29px * 1)) calc(-26px + calc(-14px * 1));
+      }
+
+      &.color-9 {
+        background: url('../assets/Face.png') calc(-174px + calc(-29px * 2)) calc(-26px + calc(-14px * 1));
+      }
+
+      &.color-10 {
+        background: url('../assets/Face.png') calc(-174px + calc(-29px * 3)) calc(-26px + calc(-14px * 1));
+      }
+
+      &.color-11 {
+        background: url('../assets/Face.png') calc(-174px + calc(-29px * 4)) calc(-26px + calc(-14px * 1));
+      }
+
+      &.color-12 {
+        background: url('../assets/Face.png') calc(-174px + calc(-29px * 5)) calc(-26px + calc(-14px * 1));
+      }
+    }
+
+    &.mouth-5.race-dwarf {
+      top: calc(215px + 85px);
+    }
+
+    &.cheeks-1 {
+      width: 126px;
+      height: 33px;
+      left: 117px;
+      top: 183px;
+
+      &.color-1 {
+        background: url('../assets/Face.png') calc(-126px * 0) calc(-54px + calc(-33px * 0));
+      }
+
+      &.color-2 {
+        background: url('../assets/Face.png') calc(-126px * 1) calc(-54px + calc(-33px * 0));
+      }
+
+      &.color-3 {
+        background: url('../assets/Face.png') calc(-126px * 2) calc(-54px + calc(-33px * 0));
+      }
+
+      &.color-4 {
+        background: url('../assets/Face.png') calc(-126px * 3) calc(-54px + calc(-33px * 0));
+      }
+
+      &.color-5 {
+        background: url('../assets/Face.png') calc(-126px * 4) calc(-54px + calc(-33px * 0));
+      }
+
+      &.color-6 {
+        background: url('../assets/Face.png') calc(-126px * 5) calc(-54px + calc(-33px * 0));
+      }
+
+      &.color-7 {
+        background: url('../assets/Face.png') calc(-126px * 6) calc(-54px + calc(-33px * 0));
+      }
+
+      &.color-8 {
+        background: url('../assets/Face.png') calc(-126px * 0) calc(-54px + calc(-33px * 1));
+      }
+
+      &.color-9 {
+        background: url('../assets/Face.png') calc(-126px * 1) calc(-54px + calc(-33px * 1));
+      }
+
+      &.color-10 {
+        background: url('../assets/Face.png') calc(-126px * 2) calc(-54px + calc(-33px * 1));
+      }
+
+      &.color-11 {
+        background: url('../assets/Face.png') calc(-126px * 3) calc(-54px + calc(-33px * 1));
+      }
+
+      &.color-12 {
+        background: url('../assets/Face.png') calc(-126px * 4) calc(-54px + calc(-33px * 1));
+      }
+
+      &.color-13 {
+        background: url('../assets/Face.png') calc(-126px * 5) calc(-54px + calc(-33px * 1));
+      }
+
+      &.color-14 {
+        background: url('../assets/Face.png') calc(-126px * 6) calc(-54px + calc(-33px * 1));
+      }
+
+      &.color-15 {
+        background: url('../assets/Face.png') calc(-126px * 0) calc(-54px + calc(-33px * 2));
+      }
+
+      &.color-16 {
+        background: url('../assets/Face.png') calc(-126px * 1) calc(-54px + calc(-33px * 2));
+      }
+
+      &.color-17 {
+        background: url('../assets/Face.png') calc(-126px * 2) calc(-54px + calc(-33px * 2));
+      }
+
+      &.color-18 {
+        background: url('../assets/Face.png') calc(-126px * 3) calc(-54px + calc(-33px * 2));
+      }
+
+      &.color-19 {
+        background: url('../assets/Face.png') calc(-126px * 4) calc(-54px + calc(-33px * 2));
+      }
+
+      &.color-20 {
+        background: url('../assets/Face.png') calc(-126px * 5) calc(-54px + calc(-33px * 2));
+      }
+
+      &.color-21 {
+        background: url('../assets/Face.png') calc(-126px * 6) calc(-54px + calc(-33px * 2));
+      }
+    }
+
+    &.cheeks-1.race-dwarf {
+      top: calc(183px + 85px);
+    }
+
+    &.cheeks-2 {
+      width: 122px;
+      height: 29px;
+      left: 122px;
+      top: 185px;
+
+      &.color-1 {
+        background: url('../assets/Face.png') calc(-122px * 0) calc(-153px + calc(-29px * 0));
+      }
+
+      &.color-2 {
+        background: url('../assets/Face.png') calc(-122px * 1) calc(-153px + calc(-29px * 0));
+      }
+
+      &.color-3 {
+        background: url('../assets/Face.png') calc(-122px * 2) calc(-153px + calc(-29px * 0));
+      }
+
+      &.color-4 {
+        background: url('../assets/Face.png') calc(-122px * 3) calc(-153px + calc(-29px * 0));
+      }
+
+      &.color-5 {
+        background: url('../assets/Face.png') calc(-122px * 4) calc(-153px + calc(-29px * 0));
+      }
+
+      &.color-6 {
+        background: url('../assets/Face.png') calc(-122px * 5) calc(-153px + calc(-29px * 0));
+      }
+
+      &.color-7 {
+        background: url('../assets/Face.png') calc(-122px * 6) calc(-153px + calc(-29px * 0));
+      }
+
+      &.color-8 {
+        background: url('../assets/Face.png') calc(-122px * 0) calc(-153px + calc(-29px * 1));
+      }
+
+      &.color-9 {
+        background: url('../assets/Face.png') calc(-122px * 1) calc(-153px + calc(-29px * 1));
+      }
+
+      &.color-10 {
+        background: url('../assets/Face.png') calc(-122px * 2) calc(-153px + calc(-29px * 1));
+      }
+
+      &.color-11 {
+        background: url('../assets/Face.png') calc(-122px * 3) calc(-153px + calc(-29px * 1));
+      }
+
+      &.color-12 {
+        background: url('../assets/Face.png') calc(-122px * 4) calc(-153px + calc(-29px * 1));
+      }
+
+      &.color-13 {
+        background: url('../assets/Face.png') calc(-122px * 5) calc(-153px + calc(-29px * 1));
+      }
+
+      &.color-14 {
+        background: url('../assets/Face.png') calc(-122px * 6) calc(-153px + calc(-29px * 1));
+      }
+
+      &.color-15 {
+        background: url('../assets/Face.png') calc(-122px * 0) calc(-153px + calc(-29px * 2));
+      }
+
+      &.color-16 {
+        background: url('../assets/Face.png') calc(-122px * 1) calc(-153px + calc(-29px * 2));
+      }
+
+      &.color-17 {
+        background: url('../assets/Face.png') calc(-122px * 2) calc(-153px + calc(-29px * 2));
+      }
+
+      &.color-18 {
+        background: url('../assets/Face.png') calc(-122px * 3) calc(-153px + calc(-29px * 2));
+      }
+
+      &.color-19 {
+        background: url('../assets/Face.png') calc(-122px * 4) calc(-153px + calc(-29px * 2));
+      }
+
+      &.color-20 {
+        background: url('../assets/Face.png') calc(-122px * 5) calc(-153px + calc(-29px * 2));
+      }
+
+      &.color-21 {
+        background: url('../assets/Face.png') calc(-122px * 6) calc(-153px + calc(-29px * 2));
+      }
+    }
+
+    &.cheeks-2.race-dwarf {
+      top: calc(185px + 85px);
+    }
+
+    &.cheeks-3 {
+      width: 62px;
+      height: 91px;
+      left: 143px;
+      top: 126px;
+
+      &.color-1 {
+        background: url('../assets/Face.png') calc(-62px * 0) calc(-419px + calc(-91px * 0));
+      }
+
+      &.color-2 {
+        background: url('../assets/Face.png') calc(-62px * 1) calc(-419px + calc(-91px * 0));
+      }
+
+      &.color-3 {
+        background: url('../assets/Face.png') calc(-62px * 2) calc(-419px + calc(-91px * 0));
+      }
+
+      &.color-4 {
+        background: url('../assets/Face.png') calc(-62px * 3) calc(-419px + calc(-91px * 0));
+      }
+
+      &.color-5 {
+        background: url('../assets/Face.png') calc(-62px * 4) calc(-419px + calc(-91px * 0));
+      }
+
+      &.color-6 {
+        background: url('../assets/Face.png') calc(-62px * 5) calc(-419px + calc(-91px * 0));
+      }
+
+      &.color-7 {
+        background: url('../assets/Face.png') calc(-62px * 6) calc(-419px + calc(-91px * 0));
+      }
+
+      &.color-8 {
+        background: url('../assets/Face.png') calc(-62px * 0) calc(-419px + calc(-91px * 1));
+      }
+
+      &.color-9 {
+        background: url('../assets/Face.png') calc(-62px * 1) calc(-419px + calc(-91px * 1));
+      }
+
+      &.color-10 {
+        background: url('../assets/Face.png') calc(-62px * 2) calc(-419px + calc(-91px * 1));
+      }
+
+      &.color-11 {
+        background: url('../assets/Face.png') calc(-62px * 3) calc(-419px + calc(-91px * 1));
+      }
+
+      &.color-12 {
+        background: url('../assets/Face.png') calc(-62px * 4) calc(-419px + calc(-91px * 1));
+      }
+
+      &.color-13 {
+        background: url('../assets/Face.png') calc(-62px * 5) calc(-419px + calc(-91px * 1));
+      }
+
+      &.color-14 {
+        background: url('../assets/Face.png') calc(-62px * 6) calc(-419px + calc(-91px * 1));
+      }
+
+      &.color-15 {
+        background: url('../assets/Face.png') calc(-62px * 0) calc(-419px + calc(-91px * 2));
+      }
+
+      &.color-16 {
+        background: url('../assets/Face.png') calc(-62px * 1) calc(-419px + calc(-91px * 2));
+      }
+
+      &.color-17 {
+        background: url('../assets/Face.png') calc(-62px * 2) calc(-419px + calc(-91px * 2));
+      }
+
+      &.color-18 {
+        background: url('../assets/Face.png') calc(-62px * 3) calc(-419px + calc(-91px * 2));
+      }
+
+      &.color-19 {
+        background: url('../assets/Face.png') calc(-62px * 4) calc(-419px + calc(-91px * 2));
+      }
+
+      &.color-20 {
+        background: url('../assets/Face.png') calc(-62px * 5) calc(-419px + calc(-91px * 2));
+      }
+
+      &.color-21 {
+        background: url('../assets/Face.png') calc(-62px * 6) calc(-419px + calc(-91px * 2));
+      }
+    }
+
+    &.cheeks-3.race-dwarf {
+      top: calc(126px + 85px);
+    }
+
+    &.accessory-1 {
+      width: 137px;
+      height: 124px;
+      left: 136px;
+      top: 75px;
+      background: url('../assets/Face.png') calc(-137px * 0) -240px;
+
+      &.subrace-aguama {
+        background: url('../assets/Face.png') calc(-137px * 1) -240px;
+      }
+
+      &.subrace-koufa {
+        background: url('../assets/Face.png') calc(-137px * 2) -240px;
+      }
+
+      &.subrace-lupios {
+        background: url('../assets/Face.png') calc(-137px * 3) -240px;
+      }
+    }
+
+    &.accessory-1.race-dwarf,
+    &.accessory-1.subrace-koufa {
+      top: calc(75px + 85px);
+    }
+
+    &.accessory-2 {
+      width: 131px;
+      height: 55px;
+      left: 94px;
+      top: 144px;
+      background: url('../assets/Face.png') calc(-131px * 0) -364px;
+
+      &.subrace-aguama {
+        background: url('../assets/Face.png') calc(-131px * 1) -364px;
+      }
+
+      &.subrace-koufa {
+        background: url('../assets/Face.png') calc(-131px * 2) -364px;
+      }
+
+      &.subrace-lupios {
+        background: url('../assets/Face.png') calc(-131px * 3) -364px;
+      }
+    }
+
+    &.accessory-2.race-dwarf,
+    &.accessory-2.subrace-koufa {
+      top: calc(144px + 85px);
+    }
+
+    &.mole {
+      width: 106px;
+      height: 36px;
+      left: 126px;
+      top: 188px;
+
+      &.mole-1 {
+        background: url('../assets/Face.png') calc(-492px + calc(-106px * 0)) 0;
+      }
+
+      &.mole-2 {
+        background: url('../assets/Face.png') calc(-492px + calc(-106px * 1)) 0;
+      }
+
+      &.mole-3 {
+        background: url('../assets/Face.png') calc(-492px + calc(-106px * 2)) 0;
+      }
+
+      &.mole-4 {
+        background: url('../assets/Face.png') calc(-492px + calc(-106px * 3)) 0;
+      }
+    }
+
+    &.mole.race-dwarf {
+      top: calc(188px + 85px);
+    }
+
+    &.piercings {
+      width: 90px;
+      height: 87px;
+      left: 173px;
+      top: 147px;
+
+      &.piercings-1 {
+        background: url('../assets/Face.png') calc(-548px + calc(-90px * 0)) calc(-240px + calc(-87px * 0));
+      }
+
+      &.piercings-2 {
+        background: url('../assets/Face.png') calc(-548px + calc(-90px * 1)) calc(-240px + calc(-87px * 0));
+      }
+
+      &.piercings-3 {
+        background: url('../assets/Face.png') calc(-548px + calc(-90px * 2)) calc(-240px + calc(-87px * 0));
+      }
+
+      &.piercings-4 {
+        background: url('../assets/Face.png') calc(-548px + calc(-90px * 0)) calc(-240px + calc(-87px * 1));
+      }
+
+      &.piercings-5 {
+        background: url('../assets/Face.png') calc(-548px + calc(-90px * 1)) calc(-240px + calc(-87px * 1));
+      }
+
+      &.piercings-6 {
+        background: url('../assets/Face.png') calc(-548px + calc(-90px * 2)) calc(-240px + calc(-87px * 1));
+      }
+
+      &.piercings-7 {
+        background: url('../assets/Face.png') calc(-548px + calc(-90px * 0)) calc(-240px + calc(-87px * 2));
+      }
+
+      &.piercings-8 {
+        background: url('../assets/Face.png') calc(-548px + calc(-90px * 1)) calc(-240px + calc(-87px * 2));
+      }
+
+      &.piercings-9 {
+        background: url('../assets/Face.png') calc(-548px + calc(-90px * 2)) calc(-240px + calc(-87px * 2));
+      }
+    }
+
+    &.piercings.race-dwarf {
+      top: calc(147px + 85px);
     }
   }
 }

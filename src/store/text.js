@@ -330,7 +330,7 @@ export default {
     cheeks: {
       title: "Cheeks"
     },
-    accessories: {
+    accessorys: {
       title: "Accessory"
     },
     piercings: {
