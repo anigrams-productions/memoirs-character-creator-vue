@@ -523,6 +523,11 @@ export default {
       title: "Steel",
       description:
         "Heavy, or steel, armor is the best choice for those fighting on the front lines due to its superior protection against melee weapons such as swords and axes. That said, it also tends to be very heavy and overly clunky, therefore slowing the wearer down immensely. Steel armor is definitely not recommended for anyone who wants to be able to run during battle.<br /><br />+2 Vitality<br />-1 Finesse"
+    },
+    default: {
+      title: "None",
+      description:
+        "Nice and breezy!"
     }
   },
   weapon: {

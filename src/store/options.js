@@ -107,10 +107,10 @@ export const professions = {
 };
 
 export const armors = {
-  none: "none",
   light: "light",
   medium: "medium",
-  heavy: "heavy"
+  heavy: "heavy",
+  default: "default"
 };
 
 export const weapons = {

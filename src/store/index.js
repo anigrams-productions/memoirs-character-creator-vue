@@ -63,7 +63,7 @@ export default new Vuex.Store({
     piercing: face.human.prairie.piercings.min,
     region: "none",
     profession: "none",
-    armor: armors.none,
+    armor: "none",
     weapon: weapons.fists,
     skill: [],
     stats: {
