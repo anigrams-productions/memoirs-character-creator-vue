@@ -1,4 +1,12 @@
-# memoirs-character-creator
+# Memoirs Character Creator (Vue)
+
+This repository contains the source code for the web-based remake of the Memoirs Character Creator. It is currently a work-in-progress.
+
+See the original [Memoirs Character Creator](https://github.com/anigrams-productions/memoirs-character-creator) for more details.
+
+Technologies used:
+* [Vue.js](https://vuejs.org/)
+* [Vue CLI](https://cli.vuejs.org/)
 
 ## Project setup
 ```
